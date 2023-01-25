@@ -6,6 +6,10 @@ article {
   padding: 0.5em;
 }
 
+article:hover {
+  box-shadow: 0.15em 0.15em 0.15em;
+}
+
 #tweet-header {
   display: flex;
   flex-direction: row;
