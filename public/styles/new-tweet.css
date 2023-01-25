@@ -1,15 +1,15 @@
 .new-tweet {
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  max-width: 100%;
+  width: 66%;
 }
 .tweet-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .tweet-bottom {
   display: flex;
@@ -26,4 +26,5 @@
 textarea {
   background-color: transparent;
   height: 34px;
+  width: 600px
 }
