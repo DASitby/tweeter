@@ -3,7 +3,7 @@ article {
   display:flex;
   flex-direction: column;
   width: 66%;
-  padding: 0.5em
+  padding: 0.5em;
 }
 
 #tweet-header {
@@ -28,4 +28,9 @@ article {
 
 #tweet-icons {
   color:#4056a1;
+  size: 50%;
+}
+
+.tweet-icon:hover{
+  color:#9e5f00;
 }
