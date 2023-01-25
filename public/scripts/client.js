@@ -22,7 +22,7 @@ $(document).ready(function() {
   </div>
   <footer id="tweet-footer">
     <div id="tweet-age">
-    ${tweetData.created_at}
+    ${timeago.format(tweetData.created_at)}
     </div> 
     <div id="tweet-icons">
       <i class="fa-solid fa-flag tweet-icon"></i>
@@ -44,7 +44,7 @@ $(document).ready(function() {
       $tweetsContainer.append(element);
     });
   };
-  
+
   const loadTweets = () => {
     $.get("/tweets", (newTweets) => {
       renderTweets(newTweets);
