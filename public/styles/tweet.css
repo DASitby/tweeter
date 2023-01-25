@@ -1,13 +1,19 @@
+#tweets-container {
+  display: flex;
+  flex-direction: column;
+  width: 66%;
+}
+
 article {
   border-style: solid;
   display:flex;
   flex-direction: column;
-  width: 66%;
   padding: 0.5em;
+  margin: 0.5em;
 }
 
 article:hover {
-  box-shadow: 0.15em 0.15em 0.15em;
+  box-shadow: 0.15em 0.15em 0.1em darkgray;
 }
 
 #tweet-header {
