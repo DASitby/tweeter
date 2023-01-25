@@ -8,3 +8,14 @@
   background-color: #9e5f00;
 background-image: url("https://www.transparenttextures.com/patterns/hexellence.png");
 }
+
+#user-full-name {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  border-right: 0em;
+  border-left: 0em;
+  border-bottom: 0em;
+  border-style: solid;
+  width: 100%;
+}
