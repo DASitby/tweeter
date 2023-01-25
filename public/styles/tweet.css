@@ -14,6 +14,10 @@ article {
   padding: 0.5em
 }
 
+#tweet-body {
+  padding: 1em;
+}
+
 #tweet-footer {
   display: flex;
   flex-direction: row;
@@ -24,6 +28,7 @@ article {
   border-left: 0em;
   border-bottom: 0em;
   border-style: solid;
+  font-size: 75%;
 }
 
 #tweet-icons {
