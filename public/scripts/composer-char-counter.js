@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 $(document).ready(function() {
   console.log("Ready to Write to DOM");
   

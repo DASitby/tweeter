@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+/* eslint-disable no-undef */
 $(document).ready(function() {
   const createTweetElement = (tweetData) => {
     const user = tweetData.user;
