@@ -5,17 +5,11 @@
  */
 /* eslint-disable no-undef */
 $(document).ready(function() {
-  const loadTweets = () => {
-    $.get("/tweets", (newTweets) => {
-      renderTweets(newTweets);
-    });
-  };
-  loadTweets();
   const createTweetElement = (tweetData) => {
     const user = tweetData.user;
     const content = tweetData.content;
     const $tweet = (`<article>
-  <header id="tweet-header">
+    <header id="tweet-header">
     <div id="tweet-name">
       ${user.name}
     </div>
@@ -50,4 +44,11 @@ $(document).ready(function() {
       $tweetsContainer.append(element);
     });
   };
+  
+  const loadTweets = () => {
+    $.get("/tweets", (newTweets) => {
+      renderTweets(newTweets);
+    });
+  };
+  loadTweets();
 });
