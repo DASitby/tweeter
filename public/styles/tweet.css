@@ -1,0 +1,27 @@
+article {
+  border-style: solid;
+  display:flex;
+  flex-direction: column;
+  width: 66%;
+  padding: 0.5em
+}
+
+#tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em
+}
+
+#tweet-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  border-right: 0em;
+  border-left: 0em;
+  border-bottom: 0em;
+  border-style: solid;
+}
