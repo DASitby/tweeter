@@ -11,7 +11,7 @@ $(document).ready(function() {
     const $tweet = (`<article>
     <header id="tweet-header">
     <div id="tweet-name">
-      ${user.name}
+      <img class="avatar" src=${user.avatars}>${user.name}
     </div>
     <div id="tweet-user">
     ${user.handle}

@@ -28,6 +28,15 @@ article:hover {
   padding: 1em;
 }
 
+#tweet-name {
+  display: flex;
+  align-items: center;
+}
+
+.avatar{
+  padding-right: 0.5em;
+}
+
 #tweet-footer {
   display: flex;
   flex-direction: row;
