@@ -34,9 +34,8 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  let $tweetsContainer = $("#tweets-container");
   const renderTweets = function(tweets) {
-    console.log(tweets);
-    let $tweetsContainer = $("#tweets-container");
     // loops through tweets
     for (let i = tweets.length - 1; i >= 0; i--) {
       let tweet = tweets[i];
@@ -69,6 +68,9 @@ $(document).ready(function() {
       return alert("Your tweet is too long");
     }
     const tweetQuery = $input.serialize();
-    $.post("/tweets", tweetQuery);
+    $.post("/tweets", tweetQuery, () => {
+      $tweetsContainer.empty();
+      loadTweets();
+    });
   });
 });
