@@ -35,14 +35,17 @@ $(document).ready(function() {
   };
 
   const renderTweets = function(tweets) {
+    console.log(tweets);
     let $tweetsContainer = $("#tweets-container");
     // loops through tweets
-    tweets.forEach(tweet => {
-    // calls createTweetElement for each tweet
+    for (let i = tweets.length - 1; i >= 0; i--) {
+      let tweet = tweets[i];
+      console.log(tweet);
+      // calls createTweetElement for each tweet
       let element = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
       $tweetsContainer.append(element);
-    });
+    }
   };
 
   const loadTweets = () => {
@@ -51,4 +54,21 @@ $(document).ready(function() {
     });
   };
   loadTweets();
+  ///////////////
+  //FORM HANDLING
+  ///////////////
+  const $form = $('form');
+  const $input = $('#tweet-text');
+
+  $form.submit((event) => {
+    event.preventDefault();
+    if ($input.val() === '' || null) {
+      return alert("Please enter at least one character in your Tweet");
+    }
+    if ($input.val().length > 140) {
+      return alert("Your tweet is too long");
+    }
+    const tweetQuery = $input.serialize();
+    $.post("/tweets", tweetQuery);
+  });
 });
