@@ -8,6 +8,13 @@ $(document).ready(function() {
   const createTweetElement = (tweetData) => {
     const user = tweetData.user;
     const content = tweetData.content;
+    const escape = function(str) {
+      let div = document.createElement("div");
+      div.setAttribute("id", "tweet-body");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+    const safeHTML = `<p>${escape(content.text)}</p>`;
     const $tweet = (`<article>
     <header id="tweet-header">
     <div id="tweet-name">
@@ -17,8 +24,7 @@ $(document).ready(function() {
     ${user.handle}
     </div>
   </header>
-  <div id="tweet-body">
-  ${content.text}
+  ${safeHTML}
   </div>
   <footer id="tweet-footer">
     <div id="tweet-age">
