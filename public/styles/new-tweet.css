@@ -5,6 +5,13 @@
   width: 90%;
   padding: 1em;
 }
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .tweet-top {
   display: flex;
   flex-direction: row;
@@ -26,4 +33,9 @@
 
 textarea {
   background-color: transparent;
+}
+
+#error {
+  color: red;
+  font-size: 75%;
 }
