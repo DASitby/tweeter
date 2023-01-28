@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 66%;
+  width: 90%;
   padding: 1em;
 }
 .tweet-top {
@@ -26,6 +26,4 @@
 
 textarea {
   background-color: transparent;
-  height: 34px;
-  width: 600px
 }
