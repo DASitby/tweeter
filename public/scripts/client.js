@@ -93,7 +93,14 @@ $(document).ready(function() {
   ///COMPOSE SLIDEDOWN BEHAVIOUR
   //////////////////////////////
   $("#nav-arrow").click(() => {
-    console.log("nav arrow clicked");
-    $(".new-tweet").slideDown("slow", () => {});
+    if ($(".new-tweet")[0].style.display === 'none') {
+      $(".new-tweet").slideDown("slow", () => {});
+      $("#nav-arrow").css('offset-position', 'top 100px');
+      return;
+    } else {
+      $(".new-tweet").slideUp("slow", () => {});
+      $("#nav-arrow").css('class', 'mirror');
+      return;
+    }
   });
 });
