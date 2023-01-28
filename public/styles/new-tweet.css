@@ -38,4 +38,9 @@ textarea {
 #error {
   color: red;
   font-size: 75%;
+  border-color: red;
+  border-width: 0.15em;
+  padding: 0.2em;
+  border-style: solid;
+  border-radius: 0.5em;
 }
