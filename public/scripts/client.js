@@ -1,10 +1,13 @@
 /*
- * Client-side JS logic goes here
+* Client-side JS logic goes here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 /* eslint-disable no-undef */
 $(document).ready(function() {
+  ////////////////////////
+  ///FUNCTION DECLARATIONS
+  ////////////////////////
   const createTweetElement = (tweetData) => {
     const user = tweetData.user;
     const content = tweetData.content;
@@ -39,31 +42,31 @@ $(document).ready(function() {
 </article>`);
     return $tweet;
   };
-
-  let $tweetsContainer = $("#tweets-container");
   const renderTweets = function(tweets) {
-    // loops through tweets
     for (let i = tweets.length - 1; i >= 0; i--) {
       let tweet = tweets[i];
-      // calls createTweetElement for each tweet
+      // calls createTweetElement for each tweet and appends it to the tweets container
       let element = createTweetElement(tweet);
-      // takes return value and appends it to the tweets container
-      $tweetsContainer.append(element);
+      $("#tweets-container").append(element);
+
     }
   };
-
   const loadTweets = () => {
     $.get("/tweets", (newTweets) => {
       renderTweets(newTweets);
     });
   };
+
+  /////////////////////
+  ///MAIN FUNCTION CALL
+  /////////////////////
   loadTweets();
+
   ///////////////
   //FORM HANDLING
   ///////////////
   const $form = $('form');
   const $input = $('#tweet-text');
-
   $form.submit((event) => {
     event.preventDefault();
     if ($input.val() === '' || null) {
@@ -81,8 +84,16 @@ $(document).ready(function() {
     const tweetQuery = $input.serialize();
     $.post("/tweets", tweetQuery, () => {
       $("#error").slideUp(10, ()=>{});
-      $tweetsContainer.empty();
+      $("#tweets-container").empty();
       loadTweets();
     });
+  });
+
+  //////////////////////////////
+  ///COMPOSE SLIDEDOWN BEHAVIOUR
+  //////////////////////////////
+  $("#nav-arrow").click(() => {
+    console.log("nav arrow clicked");
+    $(".new-tweet").slideDown("slow", () => {});
   });
 });

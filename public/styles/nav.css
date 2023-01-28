@@ -25,4 +25,15 @@ span {
 #nav-arrow {
   color: red;
   padding-bottom: 0.5em;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+#nav-arrow:hover {
+  animation: bounce 2s ease infinite;
+}
+@keyframes bounce {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(10px)}
+  100% {transform: translateY(0px)}
 }
