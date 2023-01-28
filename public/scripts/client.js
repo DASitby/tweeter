@@ -39,7 +39,6 @@ $(document).ready(function() {
     // loops through tweets
     for (let i = tweets.length - 1; i >= 0; i--) {
       let tweet = tweets[i];
-      console.log(tweet);
       // calls createTweetElement for each tweet
       let element = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
