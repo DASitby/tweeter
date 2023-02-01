@@ -111,19 +111,20 @@ $(document).ready(function() {
     if (height > lastScrollDepth) {
       lastScrollDepth = height;
     }
-    if (lastScrollDepth >= 400) {
+    if (lastScrollDepth >= 120) {
       $(".scroll-button").slideDown(100);
-      $(".titlebar").slideUp(100);
+      $(".label").slideUp(100);
     }
-    if (height < 400) {
+    if (height < 120) {
       $(".scroll-button").slideUp(10);
-      $(".titlebar").slideDown(10);
+      $(".label").slideDown(10);
       lastScrollDepth = 0;
     }
   });
   $(".scroll-button").click(() => {
     $(".scroll-button").slideUp(10);
-    $(".titlebar").slideDown(10);
+    $(".label").slideDown(10);
+    $(".new-tweet").slideDown(10);
     lastScrollDepth = 0;
   });
 });
