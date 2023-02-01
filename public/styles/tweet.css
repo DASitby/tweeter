@@ -58,3 +58,16 @@ article:hover {
 .tweet-icon:hover{
   color:#9e5f00;
 }
+
+.scroll-button {
+  position: fixed;
+  box-shadow: 2px;
+  height: 60px;
+  width: 60px;
+  bottom: 2em;
+  right: 2em;
+  border-radius: 50px;
+  background-color: #4056a1;
+  color: white;
+  display: none;
+}
