@@ -71,7 +71,7 @@ $(document).ready(function() {
     event.preventDefault();
     if ($input.val() === '' || null) {
       $("#error").slideUp(10, ()=>{});
-      $('#error').text("Please enter at least one character in your Tweet");
+      $('#error').text("Please enter at least one character in your tweet");
       $("#error").slideDown(100, ()=>{});
       return;
     }
@@ -94,13 +94,36 @@ $(document).ready(function() {
   //////////////////////////////
   $("#nav-arrow").click(() => {
     if ($(".new-tweet")[0].style.display === 'none') {
-      $(".new-tweet").slideDown("slow", () => {});
-      $("#nav-arrow").css('offset-position', 'top 100px');
+      $(".new-tweet").slideDown("slow");
       return;
     } else {
-      $(".new-tweet").slideUp("slow", () => {});
-      $("#nav-arrow").css('class', 'mirror');
+      $(".new-tweet").slideUp("slow");
       return;
     }
+  });
+  //////////////////////////
+  ///SCROLL BUTTON BEHAVIOUR
+  //////////////////////////
+  let lastScrollDepth = 0;
+  $(window).scroll(function() {
+    const height = $(window).scrollTop();
+    console.log(height);
+    if (height > lastScrollDepth) {
+      lastScrollDepth = height;
+    }
+    if (lastScrollDepth >= 400) {
+      $(".scroll-button").slideDown(100);
+      $(".titlebar").slideUp(100);
+    }
+    if (height < 400) {
+      $(".scroll-button").slideUp(10);
+      $(".titlebar").slideDown(10);
+      lastScrollDepth = 0;
+    }
+  });
+  $(".scroll-button").click(() => {
+    $(".scroll-button").slideUp(10);
+    $(".titlebar").slideDown(10);
+    lastScrollDepth = 0;
   });
 });
