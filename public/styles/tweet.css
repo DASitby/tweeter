@@ -6,7 +6,7 @@
 
 article {
   border-style: solid;
-  display:flex;
+  display: flex;
   flex-direction: column;
   padding: 0.5em;
   margin: 0.5em;
@@ -21,7 +21,7 @@ article:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em
+  padding: 0.5em;
 }
 
 #tweet-body {
@@ -33,7 +33,7 @@ article:hover {
   align-items: center;
 }
 
-.avatar{
+.avatar {
   padding-right: 0.5em;
 }
 
@@ -51,12 +51,12 @@ article:hover {
 }
 
 #tweet-icons {
-  color:#4056a1;
+  color: #4056a1;
   size: 50%;
 }
 
-.tweet-icon:hover{
-  color:#9e5f00;
+.tweet-icon:hover {
+  color: #9e5f00;
 }
 
 .scroll-button {

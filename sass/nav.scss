@@ -1,16 +1,18 @@
+$tweeterBlue: #4056a1;
+$fontFamily: 'Bungee', sans-serif;
 .titlebar {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   height: 120px;
   width: 100%;
-  background-color: #4056a1;
+  background-color: $tweeterBlue;
   color: #FFFFFF;
   position: fixed;
 }
 
 span {
-  font-family: 'Bungee', sans-serif;
+  font-family: $fontFamily;
   padding-left: 1.5em;
   font-size: 32px;
   padding-bottom: 0.5em;
@@ -28,9 +30,9 @@ span {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   transform-origin: bottom;
-}
-#nav-arrow:hover {
-  animation: bounce 2s ease infinite;
+  &:hover {
+    animation: bounce 2s ease infinite;
+  }
 }
 @keyframes bounce {
   0% {transform: translateY(0px);}

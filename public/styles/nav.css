@@ -10,11 +10,12 @@
 }
 
 span {
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   padding-left: 1.5em;
   font-size: 32px;
   padding-bottom: 0.5em;
 }
+
 .label {
   display: flex;
   flex-direction: column;
@@ -32,8 +33,15 @@ span {
 #nav-arrow:hover {
   animation: bounce 2s ease infinite;
 }
+
 @keyframes bounce {
-  0% {transform: translateY(0px);}
-  50% {transform: translateY(5px)}
-  100% {transform: translateY(0px)}
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
