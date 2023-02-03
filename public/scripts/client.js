@@ -106,8 +106,8 @@ $(document).ready(function() {
   //////////////////////////
   let lastScrollDepth = 0;
   $(window).scroll(function() {
+    $("a").attr('href', '#top');
     const height = $(window).scrollTop();
-    console.log(height);
     if (height > lastScrollDepth) {
       lastScrollDepth = height;
     }
@@ -123,6 +123,32 @@ $(document).ready(function() {
   });
   $(".scroll-button").click(() => {
     $(".scroll-button").slideUp(10);
+    $(".label").slideDown(10);
+    $(".new-tweet").slideDown(10);
+    lastScrollDepth = 0;
+  });
+  ////////////////////////////////////////////
+  ///SCROLL BUTTON BEHAVIOUR (DESKTOP VERSION)
+  ////////////////////////////////////////////
+  $("main").scroll(function() {
+    const height = $("main").scrollTop();
+    $("a").removeAttr('href');
+    if (height > lastScrollDepth) {
+      lastScrollDepth = height;
+    }
+    if (lastScrollDepth >= 120) {
+      $(".scroll-button").slideDown(100);
+      $(".label").slideUp(100);
+    }
+    if (height < 120) {
+      $(".scroll-button").slideUp(10);
+      $(".label").slideDown(10);
+      lastScrollDepth = 0;
+    }
+  });
+  $(".scroll-button").click(() => {
+    $(".scroll-button").slideUp(10);
+    $("main").animate({ scrollTop: 0 }, "fast");
     $(".label").slideDown(10);
     $(".new-tweet").slideDown(10);
     lastScrollDepth = 0;
