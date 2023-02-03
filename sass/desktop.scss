@@ -1,0 +1,17 @@
+@media only screen and (min-width: 1024px) {
+  .page {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  main {
+    padding-top: 40px;
+    height: 48vw;
+    overflow: scroll;
+    width: 200%;
+  }
+  .profile {
+    margin: 10%;
+  }
+ }
