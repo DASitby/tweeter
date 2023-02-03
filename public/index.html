@@ -3,7 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <!-- Called Last to cascade below mobile CSS-->
+    <link rel="stylesheet" href="/styles/desktop.css" type="text/css" />
 
 
     <!-- External JS -->
@@ -45,6 +47,8 @@
       </div>
       </div>
     </div>
+    </nav>
+    <div class="page">
       <header class="profile">
         <div>
             <img src="/images/profile-hex.png"> 
@@ -52,31 +56,29 @@
         <div id="user-full-name">
             <h2>David Sooley</h2>
         </div>
-    </header>    
-    </nav>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet" style="display:none">
-        <div class="tweet-header" >
-          <h1>Compose Tweet</h1>
-          <h1 id="error" hidden="true"></h1>
-        </div>
-        <form method="POST" action="/tweets/">
-          <div class="tweet-top">
-            <div><label for="tweet-text">What are you humming about?</label></div>
-            <div><textarea name="text" id="tweet-text"></textarea></div>
+      </header>    
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet" style="display:none">
+          <div class="tweet-header" >
+            <h1 id="error" hidden="true"></h1>
           </div>
-          <hr>
-          <div class="tweet-bottom">
-            <button class ="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section id="tweets-container">
-      </section>
-      <a href='#top'><button class="scroll-button"><i class="fa-solid fa-angles-up"></i></button></a>
+          <form method="POST" action="/tweets/">
+            <div class="tweet-top">
+              <div><label for="tweet-text">What are you humming about?</label></div>
+              <div><textarea name="text" id="tweet-text"></textarea></div>
+            </div>
+            <hr>
+            <div class="tweet-bottom">
+              <button class ="tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section id="tweets-container">
+        </section>
+        <a href='#top'><button class="scroll-button"><i class="fa-solid fa-angles-up"></i></button></a>
       </main>
+    </div>
   </body>
 </html>
