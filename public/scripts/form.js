@@ -1,6 +1,5 @@
-///////////////
+/* eslint-disable no-undef */
 //FORM HANDLING
-///////////////
 $(document).ready(function() {
   const $form = $('form');
   const $input = $('#tweet-text');
