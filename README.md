@@ -50,4 +50,3 @@ This repository is the starter code for the project: Students will fork and clon
 ## Sass Styling
 - CSS Styles found in /public/styles are linked to .scss files located in /sass.
 - After installing Sass dependency run the sass script with the command: run the sass script with the command 'npm run sass-watch'
-- 
