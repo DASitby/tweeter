@@ -23,14 +23,20 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Mobile View
 ![Mobile View](https://github.com/DASitby/tweeter/blob/master/public/images/Tweeter_Mobile_View.png)
+
 Standard Mobile view of Tweeter
+
 ![New Tweet Form](https://github.com/DASitby/tweeter/blob/master/public/images/Click_down_Field.png)
+
 Click This Button to open the Tweet Menu
+
 ![Scroll Button](https://github.com/DASitby/tweeter/blob/master/public/images/Scroll_Button_example.png)
+
 When you scroll down, you can click this button to return to the top!
 
 ## Desktop View
 ![Desktop View](https://github.com/DASitby/tweeter/blob/master/public/images/Tweeter_Desktop_View.png)
+
 Desktop View, both the buttons mentioned above also work here!
 
 ## HTML
